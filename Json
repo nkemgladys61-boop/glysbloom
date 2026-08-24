@@ -1,0 +1,19 @@
+[
+  {
+    "id": "book1",
+    "title": "Whispers in Lavender",
+    "blurb": "Two girls meet under a lavender tree and everything changes.",
+    "cover": "https://via.placeholder.com/150x220/c084fc/ffffff?text=Whispers",
+    "chapters": [
+      {
+        "title": "Chapter 1: First Meeting",
+        "content": "The rain fell softly.|She looked up and saw her.|My heart skipped a beat."
+      },
+      {
+        "title": "Chapter 2: The Promise",
+        "content": "https://docs.google.com/document/d/17Ug4DqkMQSyBJXIx0i2d9kiFBxKv82Q7/export?format=txt",
+        "isDocLink": true
+      }
+    ]
+  }
+]
