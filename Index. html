@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GlysBloom - GL Webnovels</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 1. LANDING PAGE -->
+<section id="landing">
+  <h1 class="logo-landing">
+    GlysBlo<span class="y-with-flower">y</span>m
+    <svg class="flower" viewBox="0 0 24 24">
+      <path d="M12 2c-3 6-7 8 0 20 7-12 3-14 0-20z"/>
+    </svg>
+  </h1>
+  <p class="tagline">A Garden of GL Webnovels</p>
+  <button id="enterBtn" class="btn-primary">Enter the Garden</button>
+</section>
+
+<!-- 2. MAIN SITE -->
+<main id="main" class="hidden">
+  <header>
+    <div class="logo-header">GlysBloom</div>
+    <div>
+      <button id="analyticsBtn" class="btn-alt hidden">📊 Analytics</button>
+      <button id="themeToggle">☀️ Light</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- SOCIAL BAR -->
+    <div class="social-bar">
+      <a href="#" target="_blank">TikTok</a>
+      <a href="#" target="_blank">Twitter</a>
+      <a href="#" target="_blank">Discord</a>
+    </div>
+
+    <!-- ADSTERRA TOP -->
+    <div class="ad-space">
+      <small>Advertisement</small>
+      <!-- PASTE ADSTERRA NATIVE BANNER CODE HERE -->
+    </div>
+
+    <!-- LIBRARY -->
+    <section id="library">
+      <h2>📚 Book Library</h2>
+      <div id="bookList">Loading books...</div>
+    </section>
+
+    <!-- BOOK PAGE -->
+    <section id="bookPage" class="hidden">
+      <button class="backBtn" onclick="showLibrary()">← Back to Library</button>
+      <div class="book-header">
+        <img id="bookCover" class="book-cover-large" src="" alt="Cover">
+        <div>
+          <h2 id="bookTitle"></h2>
+          <p id="bookBlurb" class="blurb"></p>
+          <div class="book-meta">
+            <p>👁️ Views: <span id="bookViews">0</span></p>
+            <button onclick="shareBook()" class="btn-share">📤 Share</button>
+          </div>
+        </div>
+      </div>
+      <h3>Table of Contents</h3>
+      <ul id="tocList" class="toc"></ul>
+    </section>
+
+    <!-- READER PAGE -->
+    <section id="readerPage" class="hidden">
+      <button class="backBtn" onclick="backToBook()">← Back to Chapters</button>
+      <div class="reader-top">
+        <h3 id="chapterTitle"></h3>
+        <button id="bookmarkBtn">🔖 Bookmark</button>
+      </div>
+      <div id="pageContent" class="reader-box">Loading...</div>
+      <div class="page-controls">
+        <button onclick="prevPage()">← Previous</button>
+        <span id="pageNum"></span>
+        <button onclick="nextPage()">Next →</button>
+      </div>
+
+      <!-- ADSTERRA MIDDLE -->
+      <div class="ad-space">
+        <small>Advertisement</small>
+        <!-- PASTE ADSTERRA NATIVE BANNER CODE HERE -->
+      </div>
+
+      <!-- COMMENTS -->
+      <div class="comments">
+        <h3>💬 Comments</h3>
+        <input type="text" id="commentInput" placeholder="Leave a comment...">
+        <button onclick="postComment()">Post</button>
+        <div id="commentList"></div>
+      </div>
+    </section>
+
+    <!-- ADMIN ANALYTICS PAGE -->
+    <section id="analyticsPage" class="hidden">
+      <button class="backBtn" onclick="backToBook()">← Back to Book</button>
+      <h2>📊 Reader Analytics - Admin Only</h2>
+      <p>Total Views: <span id="analyticsViews">0</span></p>
+      <div id="analyticsGraph"></div>
+    </section>
+  </div>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
